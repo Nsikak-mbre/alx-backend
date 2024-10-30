@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Inherits from Base class
+LRUCache module that inherits from BaseCaching
 """
 from base_caching import BaseCaching
 from collections import OrderedDict
@@ -12,34 +12,34 @@ class LRUCache(BaseCaching):
     """
 
     def __init__(self):
+        """Initialize the class with OrderedDict"""
         super().__init__()
         self.cache_data = OrderedDict()
 
     def put(self, key, item):
         """
-        determines which resource is stored in cache
+        Add an item in the cache using LRU policy
         """
         if key is None or item is None:
             return
 
-        # Remove the key if it already exists to maintain the order
+        # If key already exists, delete it to maintain order
         if key in self.cache_data:
             del self.cache_data[key]
 
-        # If the cache exceeds its max limit, remove the least recently used
-        # item
-        if len(self.cache_data) > BaseCaching.MAX_ITEMS:
+        # If cache is full, pop the first (least recently used) item
+        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             first_key, _ = self.cache_data.popitem(last=False)
             print(f"DISCARD: {first_key}")
 
-        # add the new item to the cache
+        # Add the new item to the cache
         self.cache_data[key] = item
 
     def get(self, key):
         """
-        returns dictionary value set to a key
+        Get an item by key and mark it as recently used
         """
-        if ((key is None) or (key not in self.cache_data)):
+        if key is None or key not in self.cache_data:
             return None
 
         # Move the accessed key to the end to mark it as recently used
