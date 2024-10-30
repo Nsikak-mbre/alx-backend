@@ -26,13 +26,13 @@ class MRUCache(BaseCaching):
         # If key already exists, delete it to maintain order
         if key in self.cache_data:
             del self.cache_data[key]
-        
+
         # If cache is full, pop the first (least recently used) item
         if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             mru_key, _ = self.cache_data.popitem(last=True)
             print(f"DISCARD: {mru_key}")
 
-         # Add the new item to the cache
+        # Add the new item to the cache
         self.cache_data[key] = item
 
     def get(self, key):
