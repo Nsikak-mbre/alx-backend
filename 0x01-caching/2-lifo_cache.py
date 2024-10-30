@@ -30,9 +30,8 @@ class LIFOCache(BaseCaching):
             last_key, _ = self.cache_data.popitem(last=True)
             print(f"DISCARD: {last_key}")
 
-         # Now add the new item to the cache
+        # Now add the new item to the cache
         self.cache_data[key] = item
-
 
     def get(self, key):
         """
