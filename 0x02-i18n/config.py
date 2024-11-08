@@ -5,6 +5,9 @@ Configurations for my flask app
 
 
 class Config:
+    """
+    Specifies the languages available
+    """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
