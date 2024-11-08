@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """
-Basic Flask app setup.
+This module sets up a basic Flask application with a single route.
+The index route renders a simple HTML page that
+displays 'Hello world' in the header.
 """
+
 
 from flask import Flask, render_template
 from typing import Any
@@ -11,5 +14,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index() -> Any:
-    """Renders the index page."""
+    """
+    Handles the root URL and renders the index page.
+    """
     return render_template('index.html')
