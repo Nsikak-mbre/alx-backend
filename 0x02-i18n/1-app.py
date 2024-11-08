@@ -14,15 +14,15 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
-# @app.route('/')
-# def index() -> str:
-#     """
-#     Handles the root URL and renders the index page.
+@app.route('/')
+def index() -> str:
+    """
+    Handles the root URL and renders the index page.
 
-#     Returns:
-#         str: The HTML content for the index page.
-#     """
-#     return render_template('1-index.html')
+    Returns:
+        str: The HTML content for the index page.
+    """
+    return render_template('1-index.html')
 
 
 if __name__ == '__main__':
