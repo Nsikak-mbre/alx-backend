@@ -7,7 +7,7 @@ displays 'Hello world' in the header.
 
 
 from flask import Flask, render_template
-from typing import Any
+
 
 app = Flask(__name__)
 
