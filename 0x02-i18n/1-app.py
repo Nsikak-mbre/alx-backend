@@ -9,6 +9,7 @@ from flask_babel import Babel
 from config import Config
 
 app = Flask(__name__)
+app.config.from_object(Config)
 babel = Babel(app)
 
 
