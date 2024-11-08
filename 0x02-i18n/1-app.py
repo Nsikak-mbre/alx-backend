@@ -4,9 +4,10 @@ This module sets up a basic Flask application with a single route.
 The root route renders a template displaying a welcome message.
 """
 
+from config import Config
 from flask import Flask, render_template
 from flask_babel import Babel
-from config import Config
+
 
 app = Flask(__name__)
 app.config.from_object(Config)
