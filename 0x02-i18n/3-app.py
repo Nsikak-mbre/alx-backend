@@ -4,9 +4,8 @@ This module sets up a basic Flask application with a single route.
 The root route renders a template displaying a welcome message.
 """
 
-
-from flask import Flask, render_template, request
 from flask_babel import Babel, _
+from flask import Flask, render_template, request
 
 
 class Config:
