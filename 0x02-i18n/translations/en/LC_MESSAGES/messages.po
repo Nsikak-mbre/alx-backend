@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-11-08 18:32+0100\n"
-"PO-Revision-Date: 2024-11-08 18:33+0100\n"
+"PO-Revision-Date: 2024-11-08 20:01+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
@@ -19,12 +19,12 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 
 #: myenv/lib/python3.10/site-packages/click/_termui_impl.py:518
-msgid "home_title"
-msgstr "Welcome to Holberton"
+msgid "{editor}: Editing failed"
+msgstr ""
 
 #: myenv/lib/python3.10/site-packages/click/_termui_impl.py:522
-msgid "home_header"
-msgstr "Hello World"
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
 
 #: myenv/lib/python3.10/site-packages/click/core.py:1120
 msgid "Aborted!"
@@ -280,9 +280,9 @@ msgstr[1] ""
 
 #: templates/3-index.html:6
 msgid "home_title"
-msgstr ""
+msgstr "Welcome to Holberton"
 
 #: templates/3-index.html:9
 msgid "home_header"
-msgstr ""
+msgstr "Hello world!"
 

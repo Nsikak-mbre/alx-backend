@@ -6,7 +6,7 @@ The root route renders a template displaying a welcome message.
 
 
 from flask import Flask, render_template, request
-from flask_babel import Babel
+from flask_babel import Babel, _
 
 
 class Config:
