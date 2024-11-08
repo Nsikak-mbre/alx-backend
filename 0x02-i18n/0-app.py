@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index() -> Any:
+def index() -> str:
     """
     Handles the root URL and renders the index page.
     """
