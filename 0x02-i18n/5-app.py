@@ -61,7 +61,8 @@ def get_user() -> dict:
 @app.before_request
 def before_request():
     """
-    Executed before all other functions. Sets the user as a global variable if found.
+    Executed before all other functions.
+    Sets the user as a global variable if found.
     """
     g.user = get_user()
 
@@ -74,7 +75,9 @@ def index() -> str:
     Returns:
         str: The HTML content for the index page.
     """
-    return render_template('5-index.html', home_title=_('home_title'), home_header=_('home_header'))
+    return render_template(
+        '5-index.html', home_title=_(
+            'home_title'), home_header=_('home_header'))
 
 
 if __name__ == '__main__':
