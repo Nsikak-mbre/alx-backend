@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+""" Module fot pagination function """
+
 import csv
 import math
 from typing import List, Dict, Any
